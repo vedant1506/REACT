@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+/* Global dark theme for full screen and white text */
+html,
+body,
+#root {
+    height: 100%;
+}
+
+html,
+body {
+    background-color: #172842; /* same as app background */
+    color: #ffffff;
+    margin: 0;
+}
+
+/* Make all text white by default */
+* {
+    color: inherit;
+}
+
+/* Links */
+a {
+    color: #ffffff;
+}
+
+/* Inputs and form elements */
+input,
+textarea,
+select,
+button {
+    color: #ffffff;
+}
+
+/* Placeholder color */
+::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Override common light backgrounds that were causing patches */
+.bg-white,
+.bg-gray-50,
+.bg-gray-100,
+.bg-gray-200 {
+    background-color: #172842 !important;
+}
+
+/* Force any black text utility to become white for contrast */
+.text-black {
+    color: #ffffff !important;
+}
+
+/* Optional: soften default light borders on dark background */
+.border-gray-200,
+.border-gray-300,
+.border-black\/10 {
+    border-color: rgba(255, 255, 255, 0.2) !important;
+}
